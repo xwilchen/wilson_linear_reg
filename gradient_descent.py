@@ -7,7 +7,7 @@ class Gradient_Descent():
         self.X = self.prepare_X(X)
         self.y = self.transform_vector(y)
         self.iteration = iteration
-        self.J
+        self.J = None
 
     def prepare_X(self,X):
         theta_X0 = np.ones((X.shape[0],1))
@@ -29,5 +29,8 @@ class Gradient_Descent():
 
     def gradient_descent(self):
         for i in range(self.iteration):
+            previous_theta = self.theta
             self.theta = self.update_theta(self.theta,self.alpha,self.X,self.y)
-            J = self.objective_func(self.X,self.theta,self.y)
+            self.J = self.objective_func(self.X,self.theta,self.y)
+            if abs(previous_theta - self.theta) < 0.0001:
+                return (self.theta,self.J)
