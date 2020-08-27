@@ -1,6 +1,6 @@
 import numpy as np
 
-class Gradient_Descent():
+class GradientDescent():
     def __init__(self,X,y):
         self.X = self.prepare_X(X)
         self.theta = np.ones((self.X.shape[1],1)) * 0.5
