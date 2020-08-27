@@ -1,4 +1,4 @@
-#git rm -rf --cached . commit everything before this
+.idea/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
