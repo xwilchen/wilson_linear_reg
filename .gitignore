@@ -1,5 +1,0 @@
-venv/
-.idea/
-__pycache__/
-.gitignore
-#git rm -rf --cached . commit everything before this
